@@ -1,0 +1,17 @@
+web:
+  extends:
+    file: common.yml
+    service: web
+  environment:
+    - RACK_ENV=development
+    - RAILS_ENV=development
+    - BUNDLE_PATH=/bundle
+  links:
+    - db
+  volumes:
+    - .bundle:/bundle
+    - .:/rails
+db:
+  image: postgres
+  ports:
+    - "5432"
