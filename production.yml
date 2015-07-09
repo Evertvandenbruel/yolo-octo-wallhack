@@ -6,6 +6,7 @@ web:
     - RACK_ENV=production
     - RAILS_ENV=production
     - BUNDLE_PATH=/bundle
+    - SECRET_KEY_BASE=4a4e8091eef3551af53c6c2331fcd784ef54c66648b10bb94abe4e3542357a38811069809b2a8aa7d484503bd65a2692d86204a5f220fa330d38160e9871d249
   links:
     - db
   volumes:
